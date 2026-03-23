@@ -1,14 +1,25 @@
-# Python
+# Python - środowiska wirtualne
+.venv/
+venv/
+ENV/
+env/
+
+# Cache narzędzi (które widzę w Twoim listingu)
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
 __pycache__/
 *.py[cod]
 *$py.class
-.venv/
-.env
 
-# IDE
+# Pliki VS Code i systemowe
 .vscode/
 .idea/
-
-# OS
-.DS_Store
 Thumbs.db
+desktop.ini
+
+# Dane i logi (przydatne w Stage 2 i 3)
+*.log
+.env
+data/external/
+data/interim/
