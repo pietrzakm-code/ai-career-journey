@@ -146,3 +146,16 @@ print(format_text)
 
 #special signs
 print("\'\\\t\"")
+
+#logical operators
+print(True and False)
+print(True or False)
+print(not False)
+
+#math
+print(1+2+3+4)
+print(1-5)
+print(5/2)
+print(3*5)
+print(2**10)
+print((2+2)*5/2)
