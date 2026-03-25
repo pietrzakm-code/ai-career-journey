@@ -19,10 +19,14 @@ Projects:
 - [ ] Seek and Replace _(find and replace text1 with text2 in files)_
 - [ ] Type Guard _(set of logic functions for variable casting)_
 - [ ] The Test Suite _(make tests for Matthes code from book)_
- _(more to come)_
+
+_(more to come...)_
 
 Exercises:
 | File | Topic | Source / Description | Status |
 | :--- | :--- | :--- | :--- |
-| 01_variables.py | variables and types | numerical and text variables, print function, text formatting | DONE |
-| 01_lists.py | lists, tuples, sets, dict | collections - diferences between and operations | ONGOING |
+| 01_variables.py | variables and types | numerical and text variables, print function, text formatting | :green_circle: Done |
+| 02_lists.py | lists, tuples, sets, dict | collections - diferences between and operations | :yellow_circle:Ongoing |
+| 03_loops.py | loops | if ... else, while, match, for | :red_circle:To do |
+| 03_functions.py | functions | function declaration, range, iter, built in functions | :red_circle:To do |
+| 04_modules.py | modules | create and import a module | :red_circle:To do |
