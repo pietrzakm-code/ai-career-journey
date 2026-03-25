@@ -178,3 +178,29 @@ print(format_text)
 
 #special characters
 print("\'\\\t\"")
+
+
+# --- Operators ----------
+
+#identity
+x = ['bmw', 'volvo']
+y = ['bmw', 'volvo']
+z = x
+
+print(x is z)
+print(x is y)
+print(x==y)
+print(x==z)
+
+#membership
+x = ['bmw', 'volvo', 'fiat', 'ford']
+
+print('fiat' in x)
+
+#bitwise
+print(f"6[{6:08b}] and 3[{3:08b}]")
+print(f"6 & 3 [{(6 & 3):08b}]")
+print(f"6 | 3 [{(6 | 3):08b}]")
+print(f"6 ^ 3 [{(6 ^ 3):08b}]")
+print(f"6 << 3 [{(6 << 3):08b}]")
+print(f"6 >> 3 [{(6 >> 1):08b}]")
