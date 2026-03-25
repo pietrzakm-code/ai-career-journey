@@ -90,3 +90,59 @@ print(x, y, z)
 
 #print output with +
 print(x+y+z)
+
+#large numbers zero divider
+print("The number 1000000000 ["+str(1000000000)+"] is the same as the number\n \
+1_000_000_000 ["+str(1_000_000_000)+"]")
+
+#use UPPERCASE letters for constatn variable - in python there is no const
+normal_variable = 10
+CONST_VARIABLE = 20
+
+#format already existing text
+text = "  Jan kowalski , alicja NoWak "
+print(text.upper(), text.lower(), text.title())
+print(text.strip(), text.lstrip(), text.rstrip(), sep = '|', end = "|\n")
+
+#scientific notation
+print(35e3, 12E3, -2.32e4)
+
+#complex
+x = 3+5j
+y = 2j
+z = -10j
+print(x, y, z)
+
+#conversion/cast
+x = 5.03
+y = 3
+z = "55"
+
+print(int(x), float(y), 10 - int(z))
+
+#string get by index and slice
+x = "to jest string"
+print(x, x[3], x[:4], x[3:7], x[5:])
+
+#for loop in string
+for letter in x:
+    print(letter)
+
+#check if "text" is in string
+print("jest" in x)
+print("nie ma" in x)
+
+#replace string with string
+print(x.replace("t", "l"))
+
+#split string
+a, b, c = x.split(" ")
+print(a, b, c, sep = " | ")
+
+#format string
+y=43.2
+format_text = f"Mozna dodac {2+2} coś i mozna dodac zmienna {x} ale nie tylko string {y}"
+print(format_text)
+
+#special signs
+print("\'\\\t\"")
