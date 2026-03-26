@@ -95,3 +95,74 @@ print()
 car_list = []
 car_list = [car.upper() for car in my_list if car[1] == 'i']
 print(car_list)
+
+#sort
+my_list.sort()
+print(my_list)
+
+numerical_list = [54, 82, 321, 0, -53, 45.7]
+print(numerical_list)
+numerical_list.sort()
+print(numerical_list)
+
+#sort descending
+numerical_list.sort(reverse = True)
+print(numerical_list)
+
+my_list.sort(reverse = True)
+print(my_list)
+
+#sort customize
+def my_func(n):
+    return abs(n-40)
+
+numerical_list.sort(key = my_func)
+print(numerical_list)
+
+#case sensitive
+str_list = ['a', 'A', 'b', 'Z', 'i', 'h', "Me", 'urL']
+str_list.sort()
+print(str_list)
+str_list.sort(key = str.lower)
+print(str_list)
+
+#reverse
+str_list.reverse()
+print(str_list)
+
+#copy
+car_list = my_list
+print(car_list)
+print(my_list)
+
+my_list.append("subaru")
+print(car_list)
+print(my_list)
+
+car_list = my_list.copy()
+#! also a new list can be created by constructor x = list(lst) !
+my_list.append("volvo")
+print(car_list)
+print(my_list)
+
+#slice
+car_list = my_list[5:]
+my_list.append("mg")
+
+print(car_list)
+print(my_list)
+
+#merge list
+list1 = [1,2,3]
+list2 = [4,5,6]
+
+list_operator = list1 + list2
+list_append = list1.copy()
+for x in list2:
+    list_append.append(x)
+list_extend = list1.copy()
+list_extend.extend(list2)
+
+print(list_operator)
+print(list_append)
+print(list_extend)
