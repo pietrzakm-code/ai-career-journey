@@ -166,3 +166,169 @@ list_extend.extend(list2)
 print(list_operator)
 print(list_append)
 print(list_extend)
+
+
+# --- TUPLE ----------
+
+#tuple
+my_tuple = ("apple", "banana", "cherry")
+print(my_tuple)
+
+#tuple is ordered, unchangeable, allow duplicate
+my_tuple = ("apple", "banana", "apple", "cherry")
+print(my_tuple)
+
+#index
+print(my_tuple[0], my_tuple[2])
+
+#length
+print(len(my_tuple))
+
+#one item tuple
+my_tuple = ("apple",)
+print(my_tuple)
+
+#tuple data types
+my_tuple = ("apple", "cherry", "banana")
+print(my_tuple)
+
+my_tuple = ("apple", True, 3)
+
+#tuple type
+print(type(my_tuple))
+
+#constructor
+my_tuple = tuple(("apple", "cherry", "banana"))
+print(my_tuple)
+
+#change tuple - workaround
+print(my_tuple)
+my_list = list(my_tuple)
+my_list.append("strawberry")
+my_list.insert(1, "raspberry")
+my_list.sort()
+my_tuple = tuple(my_list)
+print(my_tuple)
+
+#unpack tuple
+my_tuple = ("apple", "cherry", "banana")
+(apple, cherry, banana) = my_tuple
+
+print("{apple}, {cherry}, {banana}")
+
+#unpack with less variables
+my_tuple = ("apple", "cherry", "banana", "kiwi", "pinapple", "raspberry")
+(apple, *cherry, banana) = my_tuple
+print(apple)
+print(cherry)
+print(banana)
+
+#loop
+for x in my_tuple:
+    print(x)
+
+indx = 0
+while indx < len(my_tuple):
+    print(my_tuple[indx])
+    indx += 1
+
+#merge tuples
+tuple2 = ("tomato", "potato", "carrot")
+tuple3 = my_tuple + tuple2
+
+print(tuple3)
+
+#multiply
+my_tuple = tuple3 * 2
+print(my_tuple)
+
+
+# --- SET ----------
+
+#set
+my_set = {"tomato", "potato", "carrot"}
+print(my_set)
+
+"""
+sets are:
+unordered
+unchangeable (you can add and remove items from sets)
+unindexed
+don't allow duplicates
+"""
+#no duplicates
+my_set = {"tomato", "potato", "carrot", "potato"}
+print(my_set)
+
+#1,0 and True,False are the same
+print({1, 2, True, False, 0})
+
+#length
+print(len(my_set))
+
+#set type
+print(type(my_set))
+
+#constructor
+my_set = set(my_tuple)
+print(my_set)
+
+#get to set items
+for x in my_set:
+    print(x)
+
+print("banana" in my_set)
+print("bmw" in my_set)
+
+#add item
+my_set.add("pear")
+print(my_set)
+
+#add sets
+fruits2 = ("orange", "grapefruit", "dragon fruit")
+my_set.update(fruits2) # you can update set with any iterable
+
+print(my_set)
+
+#remove
+my_set.remove("carrot") #will rise an error if "carrot" doesn'r exist
+my_set.discard("tomato") #will NOT rise an error
+#you can also .pop() - but will pop random item (tail)
+print(my_set)
+
+#union
+set1 = {'a', 'b', 'c'}
+set2 = {1, 2, 3}
+set3 = {True, False, True}
+
+print(set1.union(set2, set3)) #this way you can union other iterables
+print(set1 | set2 | set3) #this way you can union only set with set
+
+#intersection
+print(set2.intersection(set3))
+print(set2 & set3)
+
+#intersection_update
+set3.intersection_update(set2)
+print(set3)
+
+#difference
+set3 = {0, 2, 4, 6}
+set4 = {1, 2, 3, 5}
+
+print(set3.difference(set4)) #also _update version
+print(set3 - set4)
+
+#symetric_difference
+set3 = {0, 2, 4, 6}
+set4 = {1, 2, 3, 5}
+
+print(set3.symmetric_difference(set4)) #also _update version
+print(set3 ^ set4)
+
+#frozenset
+x = frozenset(my_set)
+print(x)
+print(type(x))
+
+#frozensets are immutable - can't mutate - no remove/add items
